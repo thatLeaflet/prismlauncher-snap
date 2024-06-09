@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Prism Launcher
+Comment=A custom launcher for Minecraft
+Exec=prismlauncher
+Icon=${SNAP}/meta/gui/prismlauncher.svg
+Terminal=false
+Type=Application
+Categories=Games;

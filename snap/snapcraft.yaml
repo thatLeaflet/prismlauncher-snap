@@ -1,0 +1,39 @@
+name: prismlauncher
+title: Prism Launcher
+version: 8.3
+license: GPL-3.0
+website: https://prismlauncher.org/
+source-code: https://github.com/PrismLauncher/PrismLauncher
+issues: https://github.com/that_leaflet/prismlauncher-snap
+type: app
+icon: snap/gui/prismlauncher.svg
+summary: A custom launcher for Minecraft
+description: |
+  Prism Launcher is a custom launcher for Minecraft that focuses on predictability, long term stability and simplicity.
+  
+  Note: This is an unofficial repackaging and is not endorsed by the upstream project.
+
+confinement: strict
+base: core22
+compression: lzo
+grade: stable
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+
+parts:
+  prismlauncher:
+    plugin: dump
+    source: https://github.com/PrismLauncher/PrismLauncher/releases/download/$SNAPCRAFT_PROJECT_VERSION/PrismLauncher-Linux-Qt6-$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    stage-packages:
+      - openjdk-21-jre
+      - openjdk-17-jre
+      - openjdk-8-jre
+    
+apps:
+  prismlauncher:
+    command: bin/prismlauncher
+    extensions: [kde-neon-6]
+    plugs:
+      - home # prism needs download folder access for downloading some mods
+      - network
