@@ -4,7 +4,7 @@ version: 8.3
 license: GPL-3.0
 website: https://prismlauncher.org/
 source-code: https://github.com/PrismLauncher/PrismLauncher
-issues: https://github.com/that_leaflet/prismlauncher-snap
+issues: https://github.com/thatLeaflet/prismlauncher-snap
 type: app
 icon: snap/gui/prismlauncher.svg
 summary: A custom launcher for Minecraft
