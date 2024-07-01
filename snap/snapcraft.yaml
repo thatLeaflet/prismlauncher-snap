@@ -34,6 +34,8 @@ apps:
   prismlauncher:
     command: bin/prismlauncher
     extensions: [kde-neon-6]
+    environment:
+      PRISMLAUNCHER_DATA_DIR: "$SNAP_USER_COMMON/PrismLauncher"
     plugs:
       - home # prism needs download folder access for downloading some mods
       - network
